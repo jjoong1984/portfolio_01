@@ -2,7 +2,7 @@
 
     $('#jjContainer_Box').load('main.html')
 
-    $('.topmenu_box > login > a').on('click',function(){ 
+    $('.topmenu_box > .login > a').on('click',function(){ 
         var url = $(this).attr('href')
         $('#jjContainer').remove
         $('#jjContainer_Box').load(url)
