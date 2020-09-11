@@ -40,42 +40,6 @@
 #header .topmenu .login > a:last-child:after { 
     display:none;
 }
-#header .topmenu .lang .depth_1 > li > a { 
-    font-size: 13px;
-    color: #505050;
-    font-weight: bold;
-    padding: 13px 0;
-    display:inline-block;
-}
-
-#header .topmenu .lang  { 
-    position: absolute;
-    top:0%; right:135px;
-}
-#header .topmenu .lang .depth_1 { 
-    position: relative;
-}
-#header .topmenu .lang .depth_2 { 
-    background: #fff;
-    position: absolute;
-    top:100%; left:-12px;
-    width:100px;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow:0px 0px 5px #888;
-    display:none;
-    z-index: 999;
-}
-#header .topmenu .lang .depth_1 > li:hover .depth_2 {
-    display:block ;
-}
-#header .topmenu .lang .depth_2 > li > a { 
-    font-size: 13px;
-    color: #505050;
-    font-weight: bold;
-    padding:5px 0;
-    display:block;
-}
 #header .topmenu .sns { 
     font-size: 15px;
     color: #505050;
@@ -95,9 +59,10 @@
     position:absolute;
     top:30%; left:-4px
 }
-/* #header .topmenu .sns > a:last-child:after {
+#header .topmenu .sns > a:nth-child(1):before { 
     display:none;
-} */
+}
+
 #header .topmenu_box .login > a:hover,
 #header .topmenu_box .lang .depth_1 > li > a:hover,
 #header .topmenu_box .lang .depth_2 > li > a:hover,
@@ -122,6 +87,7 @@
 #header .nav > .depth1 > li { 
     display:inline-block;
     position:relative;
+    
 }
 #header .nav > .depth1 > li > a { 
     color: #505050;
@@ -147,12 +113,16 @@
     font-size: 14px;
     padding-left:7px;
 }
+#header .nav > .depth1 .depth2 { transition:all 0.5s;}
 #header .nav > .depth1:hover .depth2 { 
-    display: block;
+    opacity: 1;
+    z-index:999
 }
 #header .nav > .depth1 > li:hover .depth2 { 
     background:#fff;
+    box-shadow:0px 0px 1px #505050
     /* border:1px solid #ddd   */
+    
 }
 #header .nav > .depth1 > li:hover .depth2 > li > a {
     color:#505050;
@@ -164,14 +134,15 @@
     transform: translateY(-50%);
 }
 #header .nav .depth2 {
-    display:none;
+    opacity:0;
     position:absolute;
     top:100%; left:0;
     width:104%;
     padding-top:10px;
     height: 140px;
     text-align: center;
-    z-index:999
+    z-index:-1;
+  
 }
 #header .nav .depth2 > li > a { 
     padding:5px 0;
@@ -180,7 +151,7 @@
     font-size:14px;
 }
 #header .h1Nav .nav .depth1 .depth2 > li > a:hover { 
-    color:#968783;
+    color:#000;
     font-weight:bold;
 }
 #header .nav .deco_box { 
@@ -189,10 +160,12 @@
     background:rgba(0, 0, 0, 0.2);
     position:absolute;
     top:100%; left:0;
-    display:none;
+    opacity:0;
+    z-index:-1;
 }
+
 #header .nav > .depth1:hover + .deco_box { 
-    display: block;
+    opacity: 1;
 }
 
 #footer {
@@ -246,26 +219,23 @@
 
 
 
-/************** 메인페이지 스타일 *************/
-#section { padding-top:159px ;}
-.slide {
-    width:100%;
-    height:650px;
-    overflow: hidden;
-}
+/************** *****            메인페이지 스타일        ***  *************/
+#section_page { padding-top:159px ;}
+.slide { position: relative;}
 .slide .slide_inner {
     background-size:cover;
     background-repeat:no-repeat;
-    height:650px;
+    height:830px;
     position:relative;
 }
-.slide .slide_inner:nth-child(1) { 
+.slide .slide1 { 
     background-image:url(../images/slide1.jpg);
+    /* background-size:1920px 750px */
 }
-.slide .slide_inner:nth-child(2) { 
+.slide .slide2 { 
     background-image:url(../images/slide2.jpg);
 }
-.slide .slide_inner:nth-child(3) { 
+.slide .slide3 { 
     background-image:url(../images/slide3.jpg);
 }
 .slide .text { 
@@ -309,64 +279,63 @@
     color:#505050;
     background:#fff;
 }
-.slide_outer {  
-    position:relative
-}
-.slide_outer .arr { 
-    position:absolute;
+
+.slide .marrow { 
+    position: absolute;
     top:43%;
-    color:rgba(255, 255, 255, 0.8);
-    font-size:20px;
-    background:rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    background:none;
+    color:rgba(255, 255, 255, 0.5);
+    outline:none;
+    transition:all 0.3s;
+    background:rgba(0, 0, 0, 0.2);
+    padding:30px 5px;
 }
-.slide_outer .arr i { 
-    padding:40px 5px;
+.slide .marrow:hover { 
+    color:rgba(255, 255, 255, 1);
 }
-.slide_outer .arr:hover { 
-    color:rgba(255, 255, 255, 0.4);
+.slide .prevArrow { 
+    left:0;
+    z-index:99
 }
-.slide_outer .next { 
-     position:absolute;
-     right:0%;
+.slide .nextArrow { 
+    right:0;
 }
-.slide_outer .prev { 
-    position:absolute;
-    left:0%;
+.slide .slick-dots { 
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    transform:translateX(-50%)
 }
-.slide_outer .prev_img {
-    position:absolute;
-    top:43%; left:22.47px;
-    display:none;
+.slide .slick-dots li { 
+    display:inline-block;
+    width: 80px;
+    height:5px;
+    background:#ddd;
+    margin-left:10px;
+    position: relative;
 }
-.slide_outer .img1 { 
-    background-image: url(../images/slide3.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    height:100px;
-    width:180px;
+.slide .slick-dots li button { 
+    position: absolute;
+    bottom:0; left:0;
+    transform:translateX(-50%);
+    width: 0px;
+    height:5px;
+    background:#333;
+    text-indent:-9999999px;
+    overflow: hidden;
 }
-.slide_outer .prev_img > h3,
-.slide_outer .next_img > h3 { 
-    font-size: 11px;
-    color: #fff;
-    background:rgba(0, 0, 0, 0.8);
-    padding:5px 0px;
-    text-align: center;
+.slide .slick-dots li.slick-active button { 
+    background:#333;
+    animation: slickDots 4s both;
 }
-.slide_outer .next_img {
-    position:absolute;
-    top:43%; right:22.47px;
-    display:none;
+@keyframes slickDots{ 
+    0% { width: 0%;}
+    100% { width: 100%;}
 }
-.slide_outer .img2 { 
-    background-image: url(../images/slide2.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    height:100px;
-    width:180px;
-}
-.slide_outer .prev:hover + .prev_img { display:block; }
-.slide_outer .next:hover + .next_img { display:block; }
+
+
+
 
 .business ul li {
     float: left; 
@@ -646,7 +615,7 @@
 
 
 
-/******************** 조인 페이지******************/
+/***************************    조인 페이지         **********************/
 #join_page { 
     padding-top: 159px;
 }
@@ -790,7 +759,7 @@
 }
 
 
-/******************** 로그인 페이지******************/
+/********************          로그인 페이지           ******************/
 #login_page { 
     padding-top: 159px;
 }

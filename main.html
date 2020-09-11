@@ -1,8 +1,8 @@
 <div id="jjContainer"> 
-    <section id="section">
+    <section id="section_page">
         <div class="slide_outer">
             <div class="slide">
-                <div class="slide_inner">
+                <div class="slide_inner slide1">
                     <div class="text">
                         <h2>Multipurpose Template</h2>
                         <h3>mobileN Template is all you need</h3>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide_inner">
+                <div class="slide_inner slide2">
                  <div class="text">
                      <h2>Multipurpose Template</h2>
                      <h3>mobileN Template is all you Need</h3>
@@ -32,7 +32,7 @@
                      </div>
                  </div>
                 </div>
-                <div class="slide_inner">
+                <div class="slide_inner slide3">
                  <div class="text">
                      <h2>Multipurpose Template</h2>
                      <h3>mobileN Template is all you Need</h3>
@@ -47,22 +47,6 @@
                      </div>
                  </div>
                 </div>
-            </div>
-            <div class="prev arr">
-                <span class="blind">이전으로이동</span>
-                <a href="#"><i class="fas fa-chevron-left"></i></a>
-            </div>
-            <div class="next arr">
-                <span class="blind">다음으로이동</span>
-                <a href="#"><i class="fas fa-chevron-right"></i></a>
-            </div>
-            <div class="prev_img">
-                <div class="img1"></div>
-                <h3>ALL NEW NEED</h3>
-            </div>
-            <div class="next_img">
-               <div class="img2"></div>
-               <h3>NEW AND COOL</h3>
             </div>
         </div>
         <div class="business">
@@ -347,3 +331,28 @@
         </div> 
     </section>
 </div>
+
+<script>
+
+  (function($){      
+    $('.slide').slick({
+        autoplay:true,
+        dots:true,
+        autoplaySpeed:4000,
+        speed:600,
+        slidesToShow:1,
+        slidesToScroll:1,
+        pauseOnHover:true,
+        pauseOnDotsHover:false,
+        pauseOnFocus:false,
+        cssEase:'ease',
+        draggable:true,  
+        fade:false, 
+        arrows:true,
+        prevArrow:'<button class="prevArrow marrow"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow:'<button class="nextArrow marrow"><i class="fas fa-chevron-right"></i></button>'
+
+    })
+  })(jQuery)
+
+</script>
