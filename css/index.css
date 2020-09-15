@@ -632,6 +632,18 @@
 .more_services .services { 
     margin:70px 0 90px;
 }
+.more_services .services .services_box { 
+    opacity: 0;
+}
+.more_services.on .services .services_box:nth-child(1) { 
+    animation: fadeInLeft 1s both
+}
+.more_services.on .services .services_box:nth-child(2) { 
+    animation: zoomIn 1s both
+}
+.more_services.on .services .services_box:nth-child(3) { 
+    animation: fadeInRight 1s both
+}
 .more_services .services_box {
     float: left;
     width:33.3333%;
@@ -646,7 +658,8 @@
     margin:70px 0;
 }
 .more_services .services_box img { 
-    width:78%; 
+   max-width:100%; 
+   height:610px;
 }
 .more_services .services_box:first-child h3 { 
     position: relative;
@@ -659,19 +672,31 @@
     width:50px;
     background: #968783;
     text-align: right;
+
+
 }
 .Background {
-    background:url(../images/bg.png) no-repeat;
+    /* background:url(../images/bg.png) no-repeat; */
     height:500px;
-    background-size:cover;
+    /* background-size:cover;
     background-attachment: fixed;  
-    background-position:center;
+    background-position:center; */
     position: relative;
+    overflow: hidden;
 }
 .Background .Background_text { 
     color:#fff;
     text-align: center;
     padding:213px 0 ;
+}
+.Background .Background_text iframe { 
+    position: absolute;
+    z-index: -1;
+    width: 2459.72px; 
+    height: 1171px; 
+    top:0; left:0; right:0; bottom:0;
+    margin-top: -401.5px;
+    margin-left: -278.36px;
 }
 .Background .row h2 { 
     font-size: 24px;
@@ -683,9 +708,8 @@
 .Background .overlay { 
     position: absolute;
     top:0; left:0; right:0; bottom:0;
-    background:rgba(0,0,0,0.3);
+    background:rgba(0,0,0,0.4);
 }
-
 
 
 /***************************    조인 페이지         **********************/
@@ -852,7 +876,7 @@
     border:1px solid #ddd; 
 }
 .login_box .login_content { 
-    width:48%;
+    width:50%;
     margin: 0 auto;
     text-align: center;
 }
@@ -969,14 +993,14 @@
     background:#222;
     z-index: 99999999999;
 }
-/* .introBox > span { 
+.introBox > span { 
     color:#fff;
     position: absolute;
-    top:45%;
+    top:55%;
     width:100%; text-align: center;
     transform:translateY(-50%);
-    font-size: 60px;
-} */
+    font-size: 25px;
+}
 
 .clock{
     position: absolute;

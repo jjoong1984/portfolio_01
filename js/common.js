@@ -1,7 +1,7 @@
 (function($){ 
 
     $(window).load(function(){ 
-        $('.introBox').delay(1200).fadeOut(500)
+        $('.introBox').delay(800).fadeOut(300)
     })
 
     // var colorCode = ['red', 'blue', 'green', 'yellow', 'lime']
@@ -18,7 +18,6 @@
     //         color:colorCode[k]
     //     })
     // }
-
 
     $('#jjContainer_Box').load('main.html')
 

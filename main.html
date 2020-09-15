@@ -268,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <div class="more_services row">
+        <div class="more_services on row">
              <div class="border">
                 <span>MORE SERVICES</span>
             </div> 
@@ -317,6 +317,9 @@
         </div>
         <div class="Background">
             <div class="Background_text overlay">
+                <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100%" height="100%" src="https://www.youtube.com/embed/kn-1D5z3-Cs?autoplay=1&amp;modestbranding=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=mbYTP_videobg-container&amp;origin=http%3A%2F%2Fbdmp-005.cafe24.com&amp;allowfullscreen=true&amp;wmode=transparent&amp;iv_load_policy=3&amp;html5=1&amp;widgetid=1&amp;mute=1">
+                </iframe>
+                
                 <div class="row">
                     <h2> Awesome Youtube Vide Backgrounds</h2>
                     <p>Easy to add youtube videos as a background. You just need to change the video's id and get ready to be amazed...<br>If you can't make it work just get in touch with us...
@@ -382,11 +385,16 @@
             $('.see_gally').removeClass('on')
         }
 
+        var more_servicesNear = $('.more_services').offset().top-$(this).height()/1.4
+        if( sct >= more_servicesNear ) { 
+            $('.more_services').addClass('on')
+        } else { 
+            $('.more_services').removeClass('on')
+        }
+        
+
 
     })
-
-
-
 
 
   })(jQuery)
