@@ -912,6 +912,7 @@
     transform:translateY(-50%);
     transition:all 0.5s;
     z-index: -1;
+    /* opacity:1; */
 }
 .login_form .id_box.on .placeholder1 {
     font-size:11px;
@@ -919,6 +920,7 @@
     background:#fff;
     top:0; left:5%;
     z-index: 0;
+    /* opacity:1; */
 }
 .login_form .pw_box { 
     position: relative;
@@ -931,6 +933,7 @@
     transform:translateY(-50%);
     transition:all 0.5s;
     z-index: -1;
+    /* opacity:1; */
 }
 .login_form .pw_box.on .placeholder2 {
     font-size:11px;
@@ -938,6 +941,7 @@
     background:#fff;
     top:0; left:5%;
     z-index: 0;
+    /* opacity:1; */
 }
 .login_form p { 
     font-size: 14px;

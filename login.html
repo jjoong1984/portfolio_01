@@ -37,24 +37,30 @@
 
     (function($){ 
 
-        // input에 포커스를 받으면 id_box와pw_box에 on이 추가하고,
-        // if문으로  input상자에 텍스트가 없으면 on을 삭제하고, 있으면 on유지.
+        // input에 포커스를 받으면 id_box와pw_box에 on이 추가한다.
+        // blur일때 input에 글자수가 0이면 on을 삭제하고,
+        // input에 글자수가 0보다 크면 on을 유지한다.
+        
         $('.id_box > input').focus(function(){ 
             $(this).parent('.id_box').addClass('on')
-            if ( ) { 
-
+        }).blur(function(){ 
+            var idInput = $(this).val()
+            if ( idInput.length === 0) { 
+                $(this).parent('.id_box').removeClass('on')
             } else { 
-
+                $(this).parent('.id_box').addClass('on')
             }
         })
+
         $('.pw_box > input').focus(function(){ 
             $(this).parent('.pw_box').addClass('on')
-            if ( ) { 
-
+        }).blur(function(){ 
+            var pwInput = $(this).val()
+            if ( pwInput.length === 0) { 
+                $(this).parent('.pw_box').removeClass('on')
             } else { 
-
+                $(this).parent('.pw_box').addClass('on')
             }
-
         })
 
 

@@ -46,7 +46,6 @@
     })
 
 
-    //sct >= 100 goTop에 on이 붙는다
     $(window).scroll(function(){ 
         var sct = $(this).scrollTop()
         if( sct >= 600) { 
