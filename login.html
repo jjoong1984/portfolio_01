@@ -18,10 +18,12 @@
                                 <span class="placeholder2">비밀번호입력</span>   
                             </div>
                             <a href="#"><p>비밀번호를 잊으셨나요?</p></a>
-                            <span class="guest">내 컴퓨터가 아닌가요? 게스트 모드를 사용하여 비공개로 로그인하세요. <a href="#">자세히 알아보기</a></span>
+                            <span class="guest">내 컴퓨터가 아닌가요? 게스트 모드를 사용하여 비공개로 로그인하세요.
+                            <a href="#">자세히 알아보기</a>
+                            </span>
                             <div class="join">
                                 <a href="join.html">회원가입</a>
-                                <button type="submit">Login</button>
+                                <a href="index.html">Login</a>
                             </div>  
                         </fieldset>
                     </form>
@@ -30,3 +32,42 @@
     
     </section>
 </div>
+
+<script>
+
+    (function($){ 
+
+        // input에 포커스를 받으면 id_box와pw_box에 on이 추가하고,
+        // if문으로  input상자에 텍스트가 없으면 on을 삭제하고, 있으면 on유지.
+        $('.id_box > input').focus(function(){ 
+            $(this).parent('.id_box').addClass('on')
+            if ( ) { 
+
+            } else { 
+
+            }
+        })
+        $('.pw_box > input').focus(function(){ 
+            $(this).parent('.pw_box').addClass('on')
+            if ( ) { 
+
+            } else { 
+
+            }
+
+        })
+
+
+        $('.join > a').on('click',function(){ 
+            var url = $(this).attr('href')
+            $('#jjContainer').remove
+            $('#jjContainer_Box').load(url)
+            return false
+        })
+
+
+
+
+    })(jQuery)
+
+</script>

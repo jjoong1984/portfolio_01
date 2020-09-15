@@ -39,6 +39,34 @@
         }
     )
 
+    $('.goTop').on('click', function(){ 
+        $('html, body').stop().animate({
+            scrollTop:0
+        }, 500, 'linear')
+    })
+
+
+    //sct >= 100 goTop에 on이 붙는다
+    $(window).scroll(function(){ 
+        var sct = $(this).scrollTop()
+        if( sct >= 600) { 
+            $('.goTop').stop().animate({
+                opacity: 1
+            },300).css({
+                bottom: '3%'
+            })
+        } else { 
+            $('.goTop').stop().animate({
+                opacity: 0,
+            },300).css({
+                bottom: '-6%'
+            })
+        }
+    })
+
+
+
+
 
     
 

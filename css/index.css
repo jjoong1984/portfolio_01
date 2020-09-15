@@ -913,7 +913,7 @@
     transition:all 0.5s;
     z-index: -1;
 }
-.login_form input:focus + .placeholder1 {
+.login_form .id_box.on .placeholder1 {
     font-size:11px;
     color: #625654;
     background:#fff;
@@ -932,7 +932,7 @@
     transition:all 0.5s;
     z-index: -1;
 }
-.login_form input:focus + .placeholder2 {
+.login_form .pw_box.on .placeholder2 {
     font-size:11px;
     color: #625654;
     background:#fff;
@@ -959,7 +959,7 @@
     color: #625654;
     font-weight: bold;
 }
-.login_form .join a { 
+.login_form .join a:nth-child(1) { 
     font-size: 15px;
     color: #625654;
     font-weight: bold;
@@ -970,7 +970,7 @@
 .login_form .join { 
     position: relative;;
 }
-.login_form .join button { 
+.login_form .join a:nth-child(2) { 
     font-size: 15px;
     color: #fff;
     padding: 7px 30px;
@@ -980,10 +980,10 @@
     top:50%; right:0;
     transform: translateY(-50%);
 }
-.login_form .join button:hover { 
+.login_form .join a:nth-child(2):hover { 
     background:#968783 ;
 }
-.login_form .join a:hover { color:#968783 ;}
+.login_form .join a:nth-child(1):hover { color:#968783 ;}
 
 
 /* ***********************************intro loading box *******************************/
@@ -1050,4 +1050,23 @@
 @keyframes B{
     0%{transform:rotate(0deg);}
     100%{transform:rotate(360deg);}
+}
+
+
+
+/* *************goTop************ */
+.goTop { 
+    position:fixed;
+    bottom:-6%;
+    right:3%;
+    font-size:50px;
+    color:rgba(150, 150, 150, 0.6);
+    background:none;
+    outline:none;
+    cursor:pointer;
+    opacity: 0;
+}
+
+.goTop:hover { 
+    color:rgba(150, 150, 150, 1);
 }
