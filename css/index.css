@@ -355,27 +355,47 @@
 }
 
 
-
 .business ul li {
     float: left; 
     width:33.3333%;
     color: #fff;
     padding: 40px 30px;
     height:220px;
-    letter-spacing:0.6px
+    letter-spacing:0.6px;
+    
 }
 .business li > h2 { 
     font-size: 20px;
+    opacity: 0;
+}
+.business.on li > h2 { 
+    animation: fadeInUp 1s both 
 }
 .business p {
     margin: 20px 0 30px;
     font-size:14px;
+    letter-spacing:-0.2px;
+    opacity: 0;
+}
+.business.on p { 
+    animation: fadeInUp 1s both 0.5s
+}
+.business button { 
+    background:none;
+    outline:none;
+    color:#fff;
+    opacity: 0;
 }
 .business a { 
     border:2px solid #fff;
     padding:8px 15px;
     font-size:14px;
+    
 }
+.business.on button{ 
+    animation: fadeInUp 1s both 0.8s
+}
+
 .business li:nth-child(1) { background:#968783; }
 .business li:nth-child(2) { background:#625654; }
 .business li:nth-child(3) { background:#968783; }
@@ -383,7 +403,7 @@
     background:#625654;
     border:2px solid transparent;
 }
-.business li:nth-child(2) > a:hover { background:#968783; }
+.business li:nth-child(2)  a:hover { background:#968783; }
 
 .service { 
     padding:70px 0;
@@ -409,6 +429,15 @@
 }
 .service .service_box { 
     margin-top:60px;
+}
+.service.on .service_box > .box:nth-child(1){ 
+    animation:fadeInLeft 1s both
+}
+.service.on .service_box > .box:nth-child(2){ 
+    animation:fadeInUp 1s both
+}
+.service.on .service_box > .box:nth-child(3){ 
+    animation:fadeInRight 1s both
 }
 .service .service_icon { color: #968793;}
 .service .service_box i { 
@@ -441,6 +470,7 @@
 .service .service_box > .box { 
     float: left;
     width: 31.3333%;
+    opacity: 0;
 }
 .service .service_box > .box:nth-child(2) { 
     margin: 0 3%
@@ -454,6 +484,7 @@
 }
 .service .box > div:hover .overlay_text { opacity:0.8;}
 .service .box > div:hover .service_icon { color:#fff;}
+
 
 .see_gally { 
     text-align: center;
@@ -476,27 +507,8 @@
     transform:translateY(-50%);
     z-index:-1;
 }
-.see_gally .filter { 
-    margin: 50px 0;
-    text-align: center;
-    display: inline-block;
-}
-.see_gally .filter li { 
-    float: left;
-    margin:0 4px;
-    border:1px solid #515151;
-}
-.see_gally .filter li a { 
-    padding: 5px 9px;
-    font-size: 13px;
-    color: #515151;
-    display: inline-block;
-}
-.see_gally .filter li:hover { 
-    border:1px solid #a79191;
-}
-.see_gally .filter li:hover a { 
-    color:#a79191;
+.see_gally .gally_item {
+    margin:100px 0;  
 }
 .see_gally .item {
     float: left; 
@@ -508,6 +520,46 @@
     overflow:hidden;
     position: relative;
 }
+.see_gally .gally_item .item .item_box { 
+    opacity: 0;
+}
+.see_gally.on .gally_item .item:nth-child(1) .item_box:nth-child(1) { 
+    animation:zoomIn 1s both;
+}
+.see_gally.on .gally_item .item:nth-child(1) .item_box:nth-child(2) { 
+    animation:zoomIn 1s both 0.5s
+}
+.see_gally.on .gally_item .item:nth-child(1) .item_box:nth-child(3) { 
+    animation:zoomIn 1s both 0.2s
+}
+.see_gally.on .gally_item .item:nth-child(2) .item_box:nth-child(1) { 
+    animation:zoomIn 1s both 0.4s
+}
+.see_gally.on .gally_item .item:nth-child(2) .item_box:nth-child(2) { 
+    animation:zoomIn 1s both 0.1s
+}
+.see_gally.on .gally_item .item:nth-child(2) .item_box:nth-child(3) { 
+    animation:zoomIn 1s both 0.3s
+}
+.see_gally.on .gally_item .item:nth-child(3) .item_box:nth-child(1) { 
+    animation:zoomIn 1s both 0.4s
+}
+.see_gally.on .gally_item .item:nth-child(3) .item_box:nth-child(2) { 
+    animation:zoomIn 1s both 0.5s
+}
+.see_gally.on .gally_item .item:nth-child(3) .item_box:nth-child(3) { 
+    animation:zoomIn 1s both 0.2s
+}
+.see_gally.on .gally_item .item:nth-child(4) .item_box:nth-child(1) { 
+    animation:zoomIn 1s both 0.1s
+}
+.see_gally.on .gally_item .item:nth-child(4) .item_box:nth-child(2) { 
+    animation:zoomIn 1s both 0.3s
+}
+.see_gally.on .gally_item .item:nth-child(4) .item_box:nth-child(3) { 
+    animation:zoomIn 1s both 0.5s
+}
+
 .see_gally .item > .item_box:nth-child(2) { 
     margin:10px 0;
 }
@@ -536,9 +588,11 @@
     color:#9a9a9a;
 }
 .see_gally .item_box img {
-    width: 100%;
+    max-width: 100%;
     vertical-align: middle;  
 }
+
+
 .more_services { 
     text-align: center;
 }
