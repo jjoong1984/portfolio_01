@@ -993,6 +993,11 @@
 .notice_contant .numlist a:hover { 
     background:#f1f1f1;
 }
+.notice_contant .numlist a.on { 
+    background:#f1f1f1;
+}
+
+
 
 
 
