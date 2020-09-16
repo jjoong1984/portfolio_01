@@ -268,7 +268,7 @@
                 </div>
             </div>
         </div>
-        <div class="more_services on row">
+        <div class="more_services row">
              <div class="border">
                 <span>MORE SERVICES</span>
             </div> 
@@ -367,32 +367,36 @@
         var businessNear = $('.business').offset().top-$(this).height()
         if( sct >= businessNear ) { 
             $('.business').addClass('on')
-        } else { 
-            $('.business').removeClass('on')
-        }
+        } 
+        // else { 
+        //     $('.business').removeClass('on')
+        // }
 
         var serviceNear = $('.service').offset().top-$(this).height()/1.4
         if( sct >= serviceNear ) { 
             $('.service').addClass('on')
-        } else { 
-            $('.service').removeClass('on')
-        }
+        } 
+        // else { 
+        //     $('.service').removeClass('on')
+
+        // }
 
         var see_gallyNear = $('.see_gally').offset().top-$(this).height()/1.4
         if( sct >= see_gallyNear ) { 
             $('.see_gally').addClass('on')
-        } else { 
-            $('.see_gally').removeClass('on')
-        }
+        } 
+        // else { 
+        //     $('.see_gally').removeClass('on')
+
+        // }
 
         var more_servicesNear = $('.more_services').offset().top-$(this).height()/1.4
         if( sct >= more_servicesNear ) { 
             $('.more_services').addClass('on')
-        } else { 
-            $('.more_services').removeClass('on')
-        }
-        
-
+        } 
+        // else { 
+        //     $('.more_services').removeClass('on')
+        // }
 
     })
 

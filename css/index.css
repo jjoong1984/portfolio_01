@@ -378,7 +378,7 @@
     opacity: 0;
 }
 .business.on p { 
-    animation: fadeInUp 1s both 0.5s
+    animation: fadeInUp 1s both 0.3s
 }
 .business button { 
     background:none;
@@ -393,7 +393,7 @@
     
 }
 .business.on button{ 
-    animation: fadeInUp 1s both 0.8s
+    animation: fadeInUp 1s both 0.6s
 }
 
 .business li:nth-child(1) { background:#968783; }
@@ -632,9 +632,7 @@
 .more_services .services { 
     margin:70px 0 90px;
 }
-.more_services .services .services_box { 
-    opacity: 0;
-}
+
 .more_services.on .services .services_box:nth-child(1) { 
     animation: fadeInLeft 1s both
 }
@@ -647,6 +645,7 @@
 .more_services .services_box {
     float: left;
     width:33.3333%;
+    opacity: 0;
 }
 .more_services .services_box:first-child { 
     text-align:right;
@@ -716,7 +715,7 @@
 #join_page { 
     padding-top: 159px;
 }
-.background { 
+#join_page .background { 
     background-image: url(../images/member-bg.jpg);
     background-repeat: no-repeat;
     background-size:auto;
@@ -732,7 +731,7 @@
     border:1px solid #ddd; 
 }
 .join_box .join_content { 
-    width:48%;
+    width:60%;
     margin: 0 auto;
     text-align: center;
 }
@@ -856,6 +855,152 @@
 }
 
 
+/***************************    조인 페이지         **********************/
+#notice_page { 
+    padding-top: 159px;
+}
+#notice_page .background { 
+    background-image: url(../images/notice_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#notice_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#notice_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#notice_page .background .text p { 
+    font-size: 27px;
+    
+}
+.notice_box { padding:40px 0; }
+.notice_box .subMenu { 
+    text-align: center;
+    font-size: 14px;
+    color:#555;
+    display: inline-block;
+}
+.notice_box .subMenu h2 { 
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.notice_box .subMenu ul li { 
+    padding:8px 40px;
+    border-bottom:1px solid #ddd;
+}
+.notice_box .subMenu ul li:nth-child(1) { 
+    padding:8px 40px;
+    border-top:1px solid #ddd;
+}
+.notice_box .subMenu ul li.on { 
+    background: #f1f1f1;
+}
+.notice_contant { 
+    display: inline-block;
+    width: 80%;
+    margin-left:5.5%
+}
+.notice_contant .sbox_numlist form { 
+    display: inline-block;
+    vertical-align: middle;
+}
+.notice_contant .sbox_numlist .numlist { 
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 17%;
+}
+.notice_contant select{ 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px;
+    height:30px;
+    vertical-align:middle;
+}
+.notice_contant input[type=text] { 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px;
+    height:30px;
+    width:250px;
+    vertical-align:middle;
+    text-indent:0.5em;
+}
+.notice_contant input[type=submit] { 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px 10px;
+    height:30px;
+    vertical-align:middle;
+}
+.notice_table { 
+    font-size:14px;
+    color:#555;
+    margin-top:15px;
+    margin-bottom:15px;
+    display: inline-block;
+}
+.notice_table td { 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+.notice_table td,
+.notice_table th { 
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    padding:10px 5px;
+}
+.notice_table td:nth-child(1),
+.notice_table td:nth-child(3),
+.notice_table td:nth-child(4),
+.notice_table td:nth-child(5) { text-align: center;}
+
+.notice_table col:nth-child(1) { width:5% }
+.notice_table col:nth-child(2) { width:auto }
+.notice_table col:nth-child(3) { width:13% }
+.notice_table col:nth-child(4) { width:13% }
+.notice_table col:nth-child(5) { width:8% }
+
+.notice_table tr:nth-child(1) { background:#f1f1f1;text-align: center; }
+.notice_table td:nth-child(2) { text-align: left;}
+
+.notice_contant .numlist { 
+    text-align:center;
+    font-size:15px;
+    color:#555;
+}
+.notice_contant .numlist span { 
+    background:#f1f1f1;
+    padding:5px 8px;
+    display:inline-block;
+}
+.notice_contant .numlist a { 
+    display:inline-block;
+    padding:5px 8px;
+    border:1px solid #ddd;
+}
+.notice_contant .numlist a:hover { 
+    background:#f1f1f1;
+}
+
+
+
+
+
+
+
+
 /********************          로그인 페이지           ******************/
 #login_page { 
     padding-top: 159px;
@@ -876,7 +1021,7 @@
     border:1px solid #ddd; 
 }
 .login_box .login_content { 
-    width:50%;
+    width:60%;
     margin: 0 auto;
     text-align: center;
 }

@@ -28,6 +28,21 @@
         return false
     })
 
+    $('.nav > .depth1 > li > a').on('click',function(){ 
+        var url = $(this).attr('href')
+        $('#jjContainer').remove
+        $('#jjContainer_Box').load(url)
+        return false
+    })
+    $('.nav .depth2 > li > a').on('click',function(){ 
+        var url = $(this).attr('href')
+        $('#jjContainer').remove
+        $('#jjContainer_Box').load(url)
+        return false
+    })
+
+
+
     $('.depth1 > li').hover(
         function(){ 
             $('.depth2').stop().slideDown(500)
