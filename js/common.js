@@ -1,7 +1,7 @@
 (function($){ 
 
     $(window).load(function(){ 
-        $('.introBox').delay(800).fadeOut(300)
+        $('.introBox').delay(500).fadeOut(300)
     })
 
     // var colorCode = ['red', 'blue', 'green', 'yellow', 'lime']

@@ -3,18 +3,21 @@
         <div class="background">
             <div class="text"> 
                 <h2>COMMUNITY</h2>
-                <p>공지사항</p>
+                <p>묻고답하기</p>
             </div>
         </div>
         <div class="notice_box row cf">
             <div class="subMenu">
                 <h2>COMMUNITY</h2>
                 <ul>
-                    <li class="on"><a href="notice.html">공지사항</a></li>
-                    <li><a href="qna.html">묻고답하기</a></li>
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li class="on"><a href="qna.html">묻고답하기</a></li>
                 </ul>
             </div>
             <div class="notice_contant">
+                <div class="write">
+                    <a href="#">글쓰기</a>
+                </div>   
                 <div class="notice_table">
                     <div>
                         <table>
@@ -1000,6 +1003,7 @@
            .siblings().fadeOut(100)
            $(this).addClass('on').siblings().removeClass('on')
         })
+        
         
 
     })(jQuery)
