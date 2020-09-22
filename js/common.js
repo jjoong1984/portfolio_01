@@ -29,6 +29,7 @@
     })
 
     $('.nav > .depth1 > li > a').on('click',function(){ 
+        $(this).parent().addClass('on').siblings().removeClass('on')
         var url = $(this).attr('href')
         $('#jjContainer').remove
         $('#jjContainer_Box').load(url)
@@ -40,7 +41,6 @@
         $('#jjContainer_Box').load(url)
         return false
     })
-
 
 
     $('.depth1 > li').hover(

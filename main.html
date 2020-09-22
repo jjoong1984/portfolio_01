@@ -368,35 +368,35 @@
         if( sct >= businessNear ) { 
             $('.business').addClass('on')
         } 
-        // else { 
-        //     $('.business').removeClass('on')
-        // }
+        else if (sct===0) { 
+            $('.business').removeClass('on')
+        }
 
         var serviceNear = $('.service').offset().top-$(this).height()/1.4
         if( sct >= serviceNear ) { 
             $('.service').addClass('on')
         } 
-        // else { 
-        //     $('.service').removeClass('on')
+        else if (sct===0) { 
+            $('.service').removeClass('on')
 
-        // }
+        }
 
         var see_gallyNear = $('.see_gally').offset().top-$(this).height()/1.4
         if( sct >= see_gallyNear ) { 
             $('.see_gally').addClass('on')
         } 
-        // else { 
-        //     $('.see_gally').removeClass('on')
+        else if (sct===0) { 
+            $('.see_gally').removeClass('on')
 
-        // }
+        }
 
         var more_servicesNear = $('.more_services').offset().top-$(this).height()/1.4
         if( sct >= more_servicesNear ) { 
             $('.more_services').addClass('on')
         } 
-        // else { 
-        //     $('.more_services').removeClass('on')
-        // }
+        else if (sct===0) { 
+            $('.more_services').removeClass('on')
+        }
 
     })
 

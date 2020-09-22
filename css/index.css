@@ -105,6 +105,9 @@
 #header .nav > .depth1 > li > a:hover {
     color:#968783 
 }
+#header .nav > .depth1 > li.on > a {
+    color:#968783 
+}
 #header .nav > .depth1 > li > a:hover:after {
     color:#968783;
     content:'\f106';
@@ -853,7 +856,296 @@
 .join_form .btn button:hover { 
     background:#968783 ;
 }
+/***************************    회사소개 페이지   **********************/
+#intro_page { 
+    padding-top: 159px;
+}
+#intro_page .background { 
+    background-image: url(../images/intro_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#intro_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#intro_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#intro_page .background .text p { 
+    font-size: 25px;   
+}
+.intro_box { 
+    padding: 50px 0;
+}
+.intro_box h2 { 
+    color: #303030;
+    font-size:24px;
+    margin-bottom:40px;
+    padding-bottom:15px;
+    position: relative;
+}
+.intro_box h2:after { 
+    content: '';
+    width:50px;
+    height:3px;
+    background: #968783;
+    position: absolute;
+    bottom:0; left:0;
+}
+.intro_box .text > p { 
+    font-size:14px;
+    color:#505050;
+    margin-bottom:20px;
+    line-height:1.7em;
+}
+.intro_box .text >h3 { 
+    color:#303030;
+    margin-bottom:10px;
+}
+.intro { margin-bottom: 50px;}
+.intro > div { 
+    float: left;
+    width:49%;
+}
+.intro > div:nth-of-type(2) { 
+    margin-left: 15px;
+}
 
+.intro_team .picture { 
+    position: relative;
+    overflow: hidden;
+}
+.intro_team .sns { 
+    background: rgba(0, 0, 0, 0.2);
+    height: 70px;
+    position: absolute;
+    bottom:-70px;
+    width: 100%;
+    text-align: center;
+    transition:all 0.5s
+}
+
+.intro_team .sns i { 
+    color: #fff;
+    font-size: 17px; 
+    padding:0 2px;
+    margin-top: 25px;
+}
+.intro_team > div { 
+    float: left;
+    width:18%;
+    margin:0 1%;
+}
+.intro_team > div:hover .sns { 
+    bottom:0px;
+}
+
+.intro_team .name > h3 { 
+    color: #303030;
+    font-size: 18px;
+    margin: 6px 0;
+}
+.intro_team .name > p { 
+    color: #505050;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+/***************************    오시는길 페이지   **********************/
+#location_page { 
+    padding-top: 159px;
+}
+#location_page .background { 
+    background-image: url(../images/intro_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#location_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#location_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#location_page .background .text p { 
+    font-size: 25px;   
+}
+.location_box { 
+    padding: 50px 0;
+}
+.location_box  .map > div { 
+    float: left;
+    width:47.5%;
+}
+.location_box  .map > div:nth-child(2) { 
+    margin-left:5%;
+}
+.location_box  .map > div iframe { 
+    width: 100%;
+    height: 500px;
+}
+.textBox > div { 
+    float: left;
+    width:33.333%
+}
+.textBox h2 { 
+    color:#303030;
+    font-size:20px;
+    padding:0 16px;
+    border-left:4px solid #303030;
+    margin:20px 0;
+    position:relative;
+}
+.textBox h2:after { 
+    content:'';
+    width:230px;
+    height:1px;
+    position: absolute; 
+    top:50%;
+    z-index: 9999999;
+    background: #505050;;
+    margin-left:20px;
+}
+.textBox p { 
+    color:#505050;
+    font-size:14px;
+    line-height: 1.8em;
+}
+.textBox p > span { 
+    font-weight: bold;
+}
+.location_sns { 
+    margin-top: 7px;
+}
+.location_sns a { 
+    color:#505050;
+    font-size:17px;
+    margin-right: 10px;
+}
+
+
+/***************************    프로덕트 페이지   **********************/
+#product_page { 
+    padding-top: 159px;
+}
+#product_page .background { 
+    background-image: url(../images/product_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#product_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#product_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#product_page .background .text p { 
+    font-size: 25px;   
+}
+.product_box { 
+    padding: 50px 0;
+}
+.product_contant { 
+    position: relative;
+    height: 1300px;
+}
+.product_contant > ul { 
+    position: absolute;
+    display:none;
+}
+.product_contant > ul:nth-child(1) { 
+    display:block;
+}
+.product_item li { 
+    float: left;
+    width:23%;
+    margin: 15px 1%;
+}
+.product_item li img { 
+    transition:all 0.8s
+}
+.product_item li:hover img { 
+    transform:rotateY(180deg)
+}
+.product_item a > p { 
+    text-align: center;
+    margin-top: 5px;
+    color: #555;
+}
+.product_box .sbox_numlist form { 
+    float: left;
+    margin-top:10px;
+}
+.product_box .sbox_numlist .numlist { 
+    float: right;
+    margin-top:10px;
+}
+.product_box select{ 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px;
+    height:30px;
+    vertical-align:middle;
+}
+.product_box input[type=text] { 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px;
+    height:30px;
+    width:250px;
+    vertical-align:middle;
+    text-indent:0.5em;
+}
+.product_box input[type=submit] { 
+    color:#555;
+    border:1px solid #ddd;
+    padding: 4px 10px;
+    height:30px;
+    vertical-align:middle;
+}
+.product_box .numlist { 
+    font-size:15px;
+    color:#555;
+}
+.product_box .numlist a { 
+    display:inline-block;
+    padding:5px 8px;
+    border:1px solid #ddd;
+}
+.product_box .numlist a:hover { 
+    background:#f1f1f1;
+}
+.product_box .numlist a.on { 
+    background:#ddd;
+}
 
 /***************************    갤러리 페이지   **********************/
 #photo_page { 
@@ -884,9 +1176,279 @@
     font-size: 25px;
     
 }
-.photo_box { padding:40px 0; }
+.photo_box {
+    padding-top:40px;
+    height:1200px;
+}
+.photoFilter ul { 
+    margin-bottom: 30px;
+}
+.photoFilter li {
+    display:inline-block;
+    border:1px solid #777;  
+}
+.photoFilter li.on a { 
+    color:#000;
+    background:#f1f1f1;
+}
+.photoFilter li:hover > a {
+    color:#000;
+    background:#f1f1f1;
+}
+.photoFilter li > a {
+    display: inline-block;
+    padding:3px 10px; 
+    color:#777;
+    font-size: 15px;
+}
+.photoContent { 
+    position: relative;
+}
+.photoContent > div { 
+    /* float: left; */
+    width: 25%;
+    transition:all 0.5s 
+}
+.photoContent > div .photo {
+    transition:all 0.5s  
+}
+.photoContent > div:hover .photo {
+    transform: translateY(-70px);  
+}
+.photoContent > div:nth-child(1) { 
+    height:389.84px;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.photoContent > div:nth-child(2) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:0;
+}
+.photoContent > div:nth-child(3) { 
+    height:388.47px;
+    overflow: hidden;
+    position: absolute;
+    left:585px;
+    top:0;
+}
+.photoContent > div:nth-child(3).act { 
+    height:388.47px;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.photoContent > div:nth-child(4) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:877px;
+    top:0;
+}
+.photoContent > div:nth-child(4).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.photoContent > div:nth-child(5) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:194px;
+}
+.photoContent > div:nth-child(5).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.photoContent > div:nth-child(6) { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:877px;
+    top:194px;
+}
+.photoContent > div:nth-child(6).act { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:0;
+}
+.photoContent > div:nth-child(7) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:585px;
+    top:388px;
+}
+.photoContent > div:nth-child(7).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:0;
+}
+.photoContent > div:nth-child(8) { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:0px;
+    top:389px;
+}
+.photoContent > div:nth-child(8).act { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:585px;
+    top:0;
+}
+.photoContent > div:nth-child(9) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:389px;
+}
+.photoContent > div:nth-child(9).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:584px;
+    top:0;
+}
+.photoContent > div:nth-child(10) { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:585px;
+    top:583px;
+}
+.photoContent > div:nth-child(10).act { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:877px;
+    top:0;
+}
 
+.photoContent > div:nth-child(11) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:584px;
+}
+.photoContent > div:nth-child(11).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:0;
+}
 
+.photoContent > div:nth-child(12) { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:877px;
+    top:605px;
+}
+.photoContent > div:nth-child(12).act { 
+    height:411.34px;
+    overflow: hidden;
+    position: absolute;
+    left:584px;
+    top:0;
+}
+.photoContent > div:nth-child(13) { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:292px;
+    top:779px
+}
+.photoContent > div:nth-child(13).act { 
+    height:194.92px;
+    overflow: hidden;
+    position: absolute;
+    left:584px;
+    top:0;
+}
+.photoContent .text { 
+    background: #222;
+    padding:10px;
+    color: #ddd;
+}
+.photoContent .text h2 { 
+    font-size:18px;
+    margin-bottom: 5px;
+}
+
+.photoPopup { 
+    opacity: 0;
+    position: fixed;
+    top:50%; left:50%; right:50%; bottom:50%;
+    background:rgba(0, 0, 0, 0.9);
+    z-index: 99999;
+    overflow: hidden;
+    transition:all 0.5s;
+}
+.photoPopup.on { 
+    opacity: 1;
+    top:0; left:0; right:0; bottom:0;
+    overflow:visible;
+}
+.photoPopup .photoGalley > a  { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+}
+.photoPopup .close { 
+    font-size: 35px;
+    background:none;
+    cursor:pointer;
+    color: #ddd;
+    position: absolute;
+    top:5%; right:3%;
+    outline:none;
+}
+.photoPopup .close:hover { color: #fff;;}
+.photoPopup .arrow { 
+    position: absolute;
+    top:50%; 
+    transform:translateY(-50%);
+    font-size: 40px;
+    background:none;
+    cursor:pointer;
+    color: #ddd;
+    outline:none;
+}
+.photoPopup .arrow:hover { color: #fff;;}
+.photoPopup .prev { 
+    position: absolute;
+    left:5%;
+}
+.photoPopup .next { 
+    position: absolute;
+    right:5%;
+}
+.photoPopup .text { 
+    position: absolute;
+    bottom:3%; left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+}
 
 /***************************    게시판 페이지         **********************/
 #notice_page { 
