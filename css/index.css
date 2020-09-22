@@ -1040,6 +1040,112 @@
     font-size:17px;
     margin-right: 10px;
 }
+/***************************비지니스 사업안내 페이지 **********************/
+#businessInfo_page { 
+    padding-top: 159px;
+}
+#businessInfo_page .background { 
+    background-image: url(../images/BUSINESS_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#businessInfo_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#businessInfo_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#businessInfo_page .background .text p { 
+    font-size: 25px;   
+}
+.businessInfo_box { 
+    padding: 50px 0;
+}
+.businessInfoWrap { 
+    background:#f2f2f2;
+    padding:50px 0;
+    margin-bottom: 50px;
+}
+.businessInfo_content > div { 
+    float: left;
+    width: 48.5%;
+}
+.businessInfo_content .right { 
+    margin-left: 35px;
+}
+.businessInfo_content .left { 
+    margin-right: 35px;
+}
+.text_Box h2 { 
+    color:#303030;
+    font-size:24px;
+    padding:0 16px;
+    border-left:4px solid #303030;
+    margin-bottom:24px;
+    position:relative;
+}
+.text_Box h2:after { 
+    content:'';
+    width:70px;
+    height:1px;
+    position: absolute; 
+    top:50%;
+    z-index: 9999999;
+    background: #505050;;
+    margin-left:20px;
+}
+.text_Box p { 
+    color:#505050;
+    font-size:14px;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+
+/***************************비지니스 사업분야 페이지 **********************/
+#businessField_page { 
+    padding-top: 159px;
+}
+#businessField_page .background { 
+    background-image: url(../images/BUSINESS_bg.jpg);
+    background-repeat: no-repeat;
+    background-size:auto;
+    width:100%;
+    height:300px;
+    background-position:0 -50px;
+    overflow: hidden;
+    position: relative;
+}
+#businessField_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#businessField_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#businessField_page .background .text p { 
+    font-size: 25px;   
+}
+.businessField_box { 
+    padding: 50px 0;
+}
+
+
+
 
 
 /***************************    프로덕트 페이지   **********************/

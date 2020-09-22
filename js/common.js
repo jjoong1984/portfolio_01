@@ -45,12 +45,12 @@
 
     $('.depth1 > li').hover(
         function(){ 
-            $('.depth2').stop().slideDown(500)
-            $('.deco_box').stop().slideDown(500)
+            $('.depth2').stop().slideDown(300)
+            $('.deco_box').stop().slideDown(300)
         },
         function(){ 
-            $('.depth2').stop().slideUp(300)
-            $('.deco_box').stop().slideUp(300)
+            $('.depth2').stop().slideUp(200)
+            $('.deco_box').stop().slideUp(200)
         }
     )
 
