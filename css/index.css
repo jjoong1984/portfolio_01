@@ -199,11 +199,12 @@
     padding: 3px 15px;
     border:1px solid #e1e1e1;
     display: inline-block;
+    margin-left:10px;
 }
 .footer_menu .com_info { 
     font-size: 14px;
     position:absolute;
-    top:50%; left:15%;
+    top:50%; left:180px;
     transform:translateY(-50%);
 }
 .footer_menu .info > span { 
@@ -924,6 +925,7 @@
 }
 .intro_box { 
     padding: 50px 0;
+    overflow: hidden;
 }
 .intro_box h2 { 
     color: #303030;
@@ -1028,6 +1030,7 @@
 }
 .location_box { 
     padding: 50px 0;
+    overflow: hidden;
 }
 .location_box  .map > div { 
     float: left;
@@ -1180,6 +1183,7 @@
 }
 .businessField_box { 
     padding: 50px 0;
+    overflow: hidden;
 }
 .our_services > div { 
     float: left;
@@ -1802,7 +1806,7 @@
     font-size: 27px;
     
 }
-.notice_box { padding:40px 0; }
+.notice_box { padding:40px 0; overflow: hidden; }
 .notice_box .subMenu { 
     text-align: center;
     font-size: 14px;
