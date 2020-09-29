@@ -50,14 +50,18 @@
             $('.nav').show()
             $('.open_nav').hide()
             $('.close_nav').hide()
-            $('.depth2').hide()
+            $('.depth2').hide().css({ 
+                height:'140px'
+            })
             flag = false
 
         } else if ( ww <= 767 && !flag ) { 
             $('.open_nav').show()
             $('.nav').hide()
             $('.deco_box').hide()
-            $('.depth2').hide()
+            $('.depth2').hide().css({ 
+                height:'95px'
+            })
             flag = true
         }
     }
