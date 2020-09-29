@@ -43,7 +43,6 @@
     })
 
     init();
-    init2();
     var flag = true
     function init(){ 
         var ww = $(window).width()
@@ -62,30 +61,8 @@
             flag = true
         }
     }
-    function init2(){ 
-        var ww = $(window).width()
-        if ( ww > 767 ) { 
-            $('.depth1 > li').hover(
-                function(){ 
-                    $('.depth2').stop().slideDown(300)
-                    $('.deco_box').stop().slideDown(300)
-                },
-                function(){ 
-                    $('.depth2').stop().slideUp(300)
-                    $('.deco_box').stop().slideUp(300)
-                } 
-            )
-        } else if (  ww <= 767 ) {
-            $('.depth1 > li > a').on('click', function(){ 
-                $('.depth2').stop().slideToggle(300)
-
-            }) 
-          
-        }
-    }
     $(window).on('resize', function(){ 
         init()
-        init2()
     })
 
 
@@ -101,30 +78,26 @@
     })
 
     
-    // $('.depth1 > li').hover(
-    //     function(){ 
-    //         var ww = $(window).width()
-    //         if(ww > 767) {
-    //             $('.depth2').stop().slideDown(300)
-    //             $('.deco_box').stop().slideDown(300)
-    //         }
-    //         else { 
-    //             $('.depth2').hide()
-    //             $('.deco_box').hide()
-    //         }    
-    //     },
-    //     function(){ 
-    //         var ww = $(window).width()
-    //         if(ww > 767) {
-    //          $('.depth2').stop().slideUp(200)
-    //          $('.deco_box').stop().slideUp(200)
-    //         } 
-    //         else { 
-    //             $('.depth2').hide()
-    //             $('.deco_box').hide()
-    //         }
-    //     } 
-    // )
+    $('.depth1 > li').hover(
+        function(){ 
+            var ww = $(window).width()
+            if ( ww > 767) { 
+               $('.depth2').stop().slideDown(300)
+               $('.deco_box').stop().slideDown(300)
+            } else { 
+                $(this).find('.depth2').stop().slideDown(300)
+            }   
+        },
+        function(){ 
+            var ww = $(window).width()
+            if ( ww > 767) { 
+               $('.depth2').stop().slideUp(200)
+               $('.deco_box').stop().slideUp(200)
+            } else { 
+                $(this).find('.depth2').stop().slideUp(300)
+            }   
+        } 
+    )
 
     $('.goTop').on('click', function(){ 
         $('html, body').stop().animate({
