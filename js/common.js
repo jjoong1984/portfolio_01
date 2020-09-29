@@ -42,6 +42,17 @@
         return false
     })
 
+    $('.h1Nav .open_nav').on('click', function(){ 
+        $(this).stop().fadeOut(300)
+        $(this).nextAll('.close_nav').stop().fadeIn(300)
+        $(this).next().slideDown(300)
+    })
+    $('.h1Nav .close_nav').on('click', function(){ 
+        $(this).stop().fadeOut(300)
+        $(this).prevAll('.open_nav').stop().fadeIn(300)
+        $(this).prev().slideUp(300)
+    })
+
 
     $('.depth1 > li').hover(
         function(){ 

@@ -26,6 +26,7 @@
                                 <p>moblien</p>
                             </div>
                         </a>
+                        <a href="" target="_brank"><img src="" alt=""></a>
                     </div>
                 </div>
                 <div class="all type1">
@@ -177,7 +178,7 @@
                     <span class="blind">다음</span>
                     <i class="fas fa-angle-right"></i>
                 </button>
-                <div class="text">Photo Galley 1/13 </div>
+                <div class="text">Photo Galley <span>1</span>/13 </div>
             </div>
         </div>                 
     </section>
@@ -209,7 +210,8 @@
 
        var href, src, alt, diveq;
        $('.photo > a').on('click', function(){ 
-            diveq = $('.photo').parent().index()
+            diveq = $(this).parent().parent().index()
+            console.log(diveq)
             $('.photoPopup').addClass('on')
             href = $(this).attr('href')
             src = $(this).find('img').attr('src')
@@ -217,6 +219,7 @@
             $('.photoGalley > a').attr('href', href)
             $('.photoGalley > a > img').attr('src', src)
             $('.photoGalley > a > img').attr('alt', alt)
+            $('.photoPopup .text span').text(diveq+1)
             return false;
        })
        $('.photoGalley .close, .photoPopup').on('click', function(){
@@ -230,6 +233,7 @@
         href = $('.photoContent > div').eq(ind).find('a').attr('href')
         src = $('.photoContent > div').eq(ind).find('img').attr('src')
         alt = $('.photoContent > div').eq(ind).find('img').attr('alt')
+        $('.photoPopup .text span').text(diveq+1) 
         $('.photoGalley > a').attr('href', href)
         $('.photoGalley > a > img').attr({
             'src':src,

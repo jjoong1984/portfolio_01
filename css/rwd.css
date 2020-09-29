@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+@media screen and ( max-width:1169px ) { 
+
+}
+
+@media screen and ( max-width:1024px ) { 
+    #header .h1Nav h1 { 
+        font-size:42px;
+        font-family:'Raleway' 'verdana' 'sans-serif';
+        color: #505050;
+        padding:20px 0 0px 10px;
+        text-align:center;
+    }
+    #header .nav { 
+        position: relative;;
+        top:0%; right:0;
+        transform: translateY(-0%);
+    }
+    #header .nav > .depth1 {
+        position:relative;
+        text-align: center;
+    }
+    #header .nav > .depth1 > li > a { 
+        color: #505050;
+        font-size: 14px;
+        font-weight:bold;
+        padding:20px 25px;
+        display: inline-block;
+    }
+
+}
+
+@media screen and ( max-width:767px ) { 
+    #section_page,
+    #intro_page,
+    #businessInfo_page,
+    #product_page,
+    #photo_page,
+    #notice_page { padding-top:129px ;}
+
+
+    #header .h1Nav { 
+        position:relative;
+    }
+    #header .h1Nav h1 { 
+        font-size:42px;
+        font-family:'Raleway' 'verdana' 'sans-serif';
+        color: #505050;
+        padding:15px 0 15px 10px;
+        text-align:left;
+    }
+    .h1Nav .open_nav { display:block }
+    .h1Nav .close_nav { display:none }
+    #header .nav { 
+        position: absolute;
+        top:100%; right:0;
+        transform: translateY(-0%);
+        display:none;
+        background:rgba(255,255,255,0.9);
+        width: 100%;
+    }
+    #header .nav > .depth1 {
+        position:relative;
+        text-align: center;
+    }
+    #header .nav > .depth1 > li { 
+        display:block;
+        position:relative;
+    }
+    #header .nav > .depth1 > li > a { 
+        color: #505050;
+        font-size: 14px;
+        font-weight:bold;
+        padding:20px 50px;
+        display: inline-block;
+        border-bottom: 1px solid #eee;
+        width: 100%;
+    }
+    
+}

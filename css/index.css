@@ -81,6 +81,22 @@
 #header .h1Nav h1:hover {  
     color: #000
 }
+.h1Nav .open_nav { display:none }
+.h1Nav .close_nav { display:none }
+.h1Nav .common1 { 
+    font-size:18px;
+    color:#505050;
+    background:#dedede;
+    position: absolute;
+    top:50%; right:10px;
+    transform:translateY(-50%);
+    border-radius: 50%;
+    width:35px; height: 35px;
+    text-align: center; 
+}
+.h1Nav .common1 i { 
+    line-height: 35px;
+}
 #header .nav > .depth1 {
     position:relative;
 }
@@ -123,13 +139,14 @@
     z-index:999
 } */
 #header .nav > .depth1 > li:hover .depth2 { 
-    background:#fff;
-    box-shadow:0px 0px 1px #505050;
+    background:rgba(50, 50, 50, 0.9);
     
 }
-#header .nav > .depth1 > li:hover .depth2 > li > a {
-    color:#505050;
-    font-weight:bold;
+#header .nav > .depth1 > li .depth2 > li:nth-child(1) > a {
+    border-top :4px solid transparent
+}
+#header .nav > .depth1 > li:hover .depth2 > li:nth-child(1) > a {
+    border-top :4px solid #625654;
 }
 #header .nav { 
     position:absolute;
@@ -139,28 +156,27 @@
 #header .nav .depth2 {
     display:none;
     position:absolute;
-    top:100%; left:0;
-    width:104%;
-    height: 125px;
+    top:100%; left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    height: 140px;
     text-align: center;
-    /* z-index:-1; */
-  
 }
 #header .nav .depth2 > li > a { 
-    padding:12px;
+    padding-top:15px;
     display:block;
-    color: #fff;
+    color: #ddd;
     font-size:14px;
 }
 #header .h1Nav .nav .depth1 .depth2 > li > a:hover { 
-    color:#000;
     font-weight:bold;
-    background: #ddd;
+    text-decoration: underline;
+
 }
 #header .deco_box { 
     width:100%;
-    height:125px;
-    background:rgba(0, 0, 0, 0.5);
+    height:140px;
+    background:rgba(0, 0, 0, 0.6);
     position:absolute;
     top:100%; left:0;
     display:none;
@@ -231,6 +247,29 @@
     height:820px;
     position:relative;
 }
+.slide .slide_inner.slick-active { 
+    animation: zoomOutmain 4s both
+}
+@-webkit-keyframes zoomOutmain {
+    from {
+      opacity: 1;
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes zoomOutmain {
+    from {
+      opacity: 1;
+      -webkit-transform: scale3d(1.1, 1.1, 1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 .slide .slide1 { 
     background-image:url(../images/slide1.jpg);
     /* background-size:1920px 750px */
@@ -1143,9 +1182,187 @@
 .businessField_box { 
     padding: 50px 0;
 }
+.our_services > div { 
+    float: left;
+    width:50%;
+}
+.our_services .txt { 
+    text-align:right;
+    height: 800px;   
+    position:relative;
+}
+.our_services .txt > div { 
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin-right:40px
+}
+.our_services .txt > div > div:nth-child(2) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+.our_services .txt i { 
+    font-size: 32px;
+    color:#303030;
+}
+.our_services .txt h3 { 
+    font-size: 15px;
+    color:#303030;
+    margin: 20px 0;
+    position:relative;
+    padding-bottom: 20px;
+}
+.our_services .txt h3:after { 
+    content:'';
+    position:absolute;
+    bottom:0; right:0;
+    width:60px;
+    height:3px;
+    background:#968783
+}
+.our_services .txt p { 
+    font-size: 14px;
+    color:#505050;
+    width:60%;
+    margin-left:40%;
+    line-height:1.5;
+    letter-spacing:1px;
+}
+.our_services .img { 
+    right: 0;
+    background:url(../images/businessField_01.jpg) no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: right;
+    height: 800px;
+    text-align: center;
+    position:relative;
+
+}
+.our_services .img > div { 
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%)
+}
+.our_services .img h3 { 
+    font-size: 25px;
+    color:#fff;
+    position:relative;  
+    padding-bottom: 15px ;
+ 
+}
+.our_services .img h3:after {
+    content:''; 
+    position:absolute;
+    bottom:0; left:50%;
+    transform:translateX(-50%);
+    width: 100px;
+    height:2px;
+    background:#fff;
+    color:#fff;
+}
+
+.our_services .img p { 
+    font-size: 14px;
+    color:#fff;
+    width: 590px;
+    margin:0 auto;
+    padding-top: 15px ;
+
+}
 
 
 
+.mobileN > div { 
+    float: right;
+    width:50%;
+}
+.mobileN .txt { 
+    text-align:left;
+    height: 800px;   
+    position:relative;
+}
+.mobileN .txt > div { 
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    margin-left:40px
+}
+.mobileN .txt > div > div:nth-child(2) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+.mobileN .txt i { 
+    font-size: 32px;
+    color:#303030;
+}
+.mobileN .txt h3 { 
+    font-size: 15px;
+    color:#303030;
+    margin: 20px 0;
+    position:relative;
+    padding-bottom: 20px;
+}
+.mobileN .txt h3:after { 
+    content:'';
+    position:absolute;
+    bottom:0; left:0;
+    width:60px;
+    height:3px;
+    background:#968783
+}
+.mobileN .txt p { 
+    font-size: 14px;
+    color:#505050;
+    width:60%;
+    margin-left:0%;
+    line-height:1.5;
+    letter-spacing:1px;
+}
+.mobileN .img { 
+    right: 0;
+    background:url(../images/businessField_02.jpg) no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: right;
+    height: 800px;
+    text-align: center;
+    position:relative;
+
+}
+.mobileN .img > div { 
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%)
+}
+.mobileN .img h3 { 
+    font-size: 25px;
+    color:#fff;
+    position:relative;  
+    padding-bottom: 15px ;
+ 
+}
+.mobileN .img h3:after {
+    content:''; 
+    position:absolute;
+    bottom:0; left:50%;
+    transform:translateX(-50%);
+    width: 100px;
+    height:2px;
+    background:#fff;
+    color:#fff;
+}
+
+.mobileN .img p { 
+    font-size: 14px;
+    color:#fff;
+    width: 540px;
+    margin:0 auto;
+    padding-top: 15px ;
+
+}
 
 
 /***************************    프로덕트 페이지   **********************/
@@ -1285,6 +1502,7 @@
 .photo_box {
     padding-top:40px;
     height:1200px;
+    overflow: hidden;
 }
 .photoFilter ul { 
     margin-bottom: 30px;
@@ -1316,7 +1534,7 @@
     transition:all 0.5s 
 }
 .photoContent > div .photo {
-    transition:all 0.5s  
+    transition:all 0.5s  ;
 }
 .photoContent > div:hover .photo {
     transform: translateY(-70px);  
