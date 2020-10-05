@@ -60,6 +60,7 @@
             $('.depth2').hide().css({ 
                 height:'140px'
             })
+            $('.nav > .depth1 > li').removeClass('on')
             flag = false
 
         } else if ( ww <= 767 && !flag ) { 
@@ -67,8 +68,9 @@
             $('.nav').hide()
             $('.deco_box').hide()
             $('.depth2').hide().css({ 
-                height:'95px'
+                height:'auto'
             })
+            $('.nav > .depth1 > li').removeClass('on')
             flag = true
         }
     }
@@ -97,6 +99,7 @@
         $(this).stop().fadeOut(300)
         $(this).prevAll('.open_nav').stop().fadeIn(300)
         $(this).prev().stop().slideUp(300)
+        $('.depth2').slideUp(300)
     })
 
     $('.depth1 > li').hover(
@@ -114,10 +117,10 @@
         } 
     ) 
 
-    $('.depth1 > li').on('click', function(){ 
+    $('.depth1 > li > a').on('click', function(){ 
         if( $('html').hasClass('mobile') ) { 
-            $(this).find('.depth2').stop().slideToggle(300)
-            $(this).siblings().find('.depth2').stop().slideUp(300)
+            $(this).parent().find('.depth2').stop().slideToggle(300)
+            $(this).parent().siblings().find('.depth2').stop().slideUp(300)
         }
     })
 
