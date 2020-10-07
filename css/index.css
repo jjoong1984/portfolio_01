@@ -244,8 +244,10 @@
 .slide .slide_inner {
     background-size:cover;
     background-repeat:no-repeat;
+    background-position:45%;
     height:820px;
     position:relative;
+    
 }
 .slide .slide_inner.slick-active { 
     animation: zoomOutmain 4s both
@@ -307,7 +309,7 @@
     font-size:14px;
     color:#fff;
     padding:8px 30px;
-    background:transparent;
+    background:rgba(0, 0, 0, 0.4);
     border:2px solid #fff;
     border-radius:24px;
     font-weight: bold;
@@ -408,7 +410,7 @@
 }
 .business li > h2 { 
     font-size: 20px;
-    opacity: 0;
+    opacity: 1;
 }
 .business.on li > h2 { 
     animation: fadeInUp 1s both 
@@ -417,7 +419,7 @@
     margin: 20px 0 30px;
     font-size:14px;
     letter-spacing:-0.2px;
-    opacity: 0;
+    opacity: 1;
 }
 .business.on p { 
     animation: fadeInUp 1s both 0.3s
@@ -426,7 +428,7 @@
     background:none;
     outline:none;
     color:#fff;
-    opacity: 0;
+    opacity: 1;
 }
 .business a { 
     border:2px solid #fff;
@@ -476,7 +478,7 @@
     animation:fadeInLeft 1s both
 }
 .service.on .service_box > .box:nth-child(2){ 
-    animation:fadeInUp 1s both
+    animation:zoomIn 1s both
 }
 .service.on .service_box > .box:nth-child(3){ 
     animation:fadeInRight 1s both
@@ -508,6 +510,7 @@
     margin-bottom:30px;
     border:1px solid #ddd;
     position: relative;
+    height:213px
 }
 .service .service_box > .box { 
     float: left;
@@ -655,6 +658,9 @@
     transform:translateY(-50%);
     z-index:-1;
 }
+.more_services .services { 
+    margin:70px 0 90px;
+}
 .more_services .services_text i { 
     font-size: 32px;
     color:#303030
@@ -669,10 +675,6 @@
     font-size: 14px;
     color:#505050;
     line-height:1.6em;
-
-}
-.more_services .services { 
-    margin:70px 0 90px;
 }
 
 .more_services.on .services .services_box:nth-child(1) { 
@@ -766,10 +768,24 @@
     background-position:0 -50px;
     overflow: hidden;
 }
+#join_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#join_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#join_page .background .text p { 
+    font-size: 25px;   
+}
 .join_box { 
     margin:60px auto;
     padding:40px 40px;
-    width:40%;
+    width:700px;
     border:1px solid #ddd; 
 }
 .join_box .join_content { 
@@ -801,6 +817,8 @@
     outline-color: #625654; ;
     background:rgba(255, 255, 255, 0.1);
 }
+.join_form .email_box > div { display:inline-block; width:46%; position:relative;}
+.join_form .email_box > div > .email {  width:100%; }
 .join_form .email { 
     padding:13px 15px;
     border:1px solid #ddd;
@@ -824,8 +842,7 @@
 .join_form .pwre_box,
 .join_form .name_box,
 .join_form .phone_box,
-.join_form .gender_box,
-.join_form .email_box { 
+.join_form .gender_box { 
     position: relative;
 }
 .join_form .placeholder { 
@@ -895,6 +912,7 @@
 .join_form .btn button:hover { 
     background:#968783 ;
 }
+
 /***************************    회사소개 페이지   **********************/
 #intro_page { 
     padding-top: 159px;
@@ -1957,11 +1975,26 @@
     height:300px;
     background-position:0 -50px;
     overflow: hidden;
+    position:relative;
+}
+#login_page .background .text { 
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+#login_page .background .text h2 { 
+    font-size: 40px;
+    border-bottom:1px solid rgba(255, 255, 255, 0.8);
+}
+#login_page .background .text p { 
+    font-size: 25px;   
 }
 .login_box { 
     margin:60px auto;
     padding:40px 40px;
-    width:40%;
+    width:700px;
     border:1px solid #ddd; 
 }
 .login_box .login_content { 

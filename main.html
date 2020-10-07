@@ -144,7 +144,7 @@
                 <span>See Gallery</span>
             </div>  
             <div class="gally_item cf">
-                <div class="item">
+                <div class="item cf">
                     <div class="item_box">
                        <div class="item_doco">
                            <div class="text">
@@ -171,10 +171,9 @@
                            </div> 
                            <a href="#"><img src="images/item (3).jpg" alt="타이틀"></a>
                        </div>
-                    </div>
-                    
+                    </div> 
                 </div>
-                <div class="item">
+                <div class="item cf">
                     <div class="item_box">
                        <div class="item_doco">
                            <div class="text">
@@ -204,7 +203,7 @@
                     </div>
                     
                 </div>
-                <div class="item">
+                <div class="item cf">
                     <div class="item_box">
                        <div class="item_doco">
                            <div class="text">
@@ -234,7 +233,7 @@
                     </div>
                     
                 </div>
-                <div class="item">
+                <div class="item cf">
                     <div class="item_box">
                        <div class="item_doco">
                            <div class="text">
@@ -347,7 +346,13 @@
         fade:false,  //수평이동 false , 제자리이동 true
         arrows:true,
         prevArrow:'<button class="prevArrow marrow"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow:'<button class="nextArrow marrow"><i class="fas fa-chevron-right"></i></button>'
+        nextArrow:'<button class="nextArrow marrow"><i class="fas fa-chevron-right"></i></button>',
+        responsive: [{
+            breakpoint:1025,
+            settings: {
+                arrows:false
+            }
+        }]
     })
 
     $('.plpa').on('click',function(){ 
@@ -362,13 +367,13 @@
 
     $(window).scroll(function(){ 
         var sct = $(this).scrollTop()
-        var businessNear = $('.business').offset().top-$(this).height()
-        if( sct >= businessNear ) { 
-            $('.business').addClass('on')
-        } 
-        else if (sct===0) { 
-            $('.business').removeClass('on')
-        }
+        // var businessNear = $('.business').offset().top-$(this).height()/0.1
+        // if( sct >= businessNear ) { 
+        //     $('.business').addClass('on')
+        // } 
+        // else if (sct===0) { 
+        //     $('.business').removeClass('on')
+        // }
 
         var serviceNear = $('.service').offset().top-$(this).height()/1.4
         if( sct >= serviceNear ) { 

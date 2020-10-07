@@ -30,9 +30,9 @@
 
     $('.nav > .depth1 > li > a').on('click',function(){ 
         $(this).parent().addClass('on').siblings().removeClass('on')
-        var url = $(this).attr('href')
-        $('#jjContainer').remove
-        $('#jjContainer_Box').load(url)
+        // var url = $(this).attr('href')
+        // $('#jjContainer').remove
+        // $('#jjContainer_Box').load(url)
         return false
     })
     $('.nav .depth2 > li > a').on('click',function(){ 
@@ -45,6 +45,7 @@
             $('.close_nav').stop().fadeOut(300)
             $('.open_nav').stop().fadeIn(300)
             $('.nav').stop().slideUp(300)
+            $('.depth2').slideUp(300)
         }
         return false    
     })
