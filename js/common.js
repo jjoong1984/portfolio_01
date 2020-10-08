@@ -4,6 +4,53 @@
         $('.introBox').delay(500).fadeOut(300)
     })
 
+    var deviceSize = 767;
+
+    function scrollOX(status) { 
+      $('html').css({ 
+        overflowY:status
+      })
+      var htmlWidth = $('html').width()
+      return htmlWidth
+    }
+  
+    var swh = scrollOX('hidden')
+    var sws = scrollOX('scroll')
+    var swd = swh - sws
+  
+    if(swd > 0) { 
+      deviceSize = deviceSize - swd
+    }    
+
+    init();
+    function init(){ 
+        var ww = $(window).width()
+        if ( ww > deviceSize && !$('html').hasClass('pc') ) { 
+            $('html').addClass('pc').removeClass('mobile')
+            $('.nav').show()
+            $('.open_nav').hide()
+            $('.close_nav').hide()
+            $('.depth2').hide().css({ 
+                height:'140px'
+            })
+            $('.nav > .depth1 > li').removeClass('on')
+            scrollOX('scroll')
+        } else if ( ww <= deviceSize && !$('html').hasClass('mobile') ) { 
+            $('html').addClass('mobile').removeClass('pc')
+            $('.open_nav').show()
+            $('.nav').hide()
+            $('.deco_box').hide()
+            $('.depth2').hide().css({ 
+                height:'auto'
+            })
+            $('.nav > .depth1 > li').removeClass('on')
+        }
+    }
+    
+    $(window).on('resize', function(){ 
+        init()
+    })
+
     // var colorCode = ['red', 'blue', 'green', 'yellow', 'lime']
     // var  minCnt = setInterval(minusCount,1000)
     // var k = 5;
@@ -30,9 +77,9 @@
 
     $('.nav > .depth1 > li > a').on('click',function(){ 
         $(this).parent().addClass('on').siblings().removeClass('on')
-        // var url = $(this).attr('href')
-        // $('#jjContainer').remove
-        // $('#jjContainer_Box').load(url)
+        var url = $(this).attr('href')
+        $('#jjContainer').remove
+        $('#jjContainer_Box').load(url)
         return false
     })
     $('.nav .depth2 > li > a').on('click',function(){ 
@@ -48,47 +95,6 @@
             $('.depth2').slideUp(300)
         }
         return false    
-    })
-
-    init();
-    var flag = true
-    function init(){ 
-        var ww = $(window).width()
-        if ( ww > 767 && flag ) { 
-            $('.nav').show()
-            $('.open_nav').hide()
-            $('.close_nav').hide()
-            $('.depth2').hide().css({ 
-                height:'140px'
-            })
-            $('.nav > .depth1 > li').removeClass('on')
-            flag = false
-
-        } else if ( ww <= 767 && !flag ) { 
-            $('.open_nav').show()
-            $('.nav').hide()
-            $('.deco_box').hide()
-            $('.depth2').hide().css({ 
-                height:'auto'
-            })
-            $('.nav > .depth1 > li').removeClass('on')
-            flag = true
-        }
-    }
-    
-    init2();
-    function init2(){ 
-        var ww = $(window).width()
-        if (ww>767) { 
-            $('html').addClass('pc').removeClass('mobile')
-        } else { 
-            $('html').addClass('mobile').removeClass('pc')
-        }
-    }
-
-    $(window).on('resize', function(){ 
-        init()
-        init2()
     })
 
     $('.h1Nav .open_nav').on('click', function(){ 

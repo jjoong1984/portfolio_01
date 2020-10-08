@@ -689,7 +689,6 @@
 .more_services .services_box {
     float: left;
     width:33.3333%;
-    opacity: 0;
 }
 .more_services .services_box:first-child { 
     text-align:right;
@@ -697,7 +696,7 @@
 .more_services .services_box:last-child { 
     text-align:left;
 }
-.more_services .services_text:nth-last-child(2) { 
+.more_services .services_text:nth-child(2) { 
     margin:70px 0;
 }
 .more_services .services_box img { 
@@ -707,6 +706,9 @@
 .more_services .services_box:first-child h3 { 
     position: relative;
 }
+.more_services .services_box:last-child h3 { 
+    position: relative;
+}
 .more_services .services_box:first-child h3:after {
     content: '';
     position: absolute;
@@ -714,10 +716,16 @@
     height:3px;
     width:50px;
     background: #968783;
-    text-align: right;
-
-
 }
+.more_services .services_box:last-child h3:after {
+    content: '';
+    position: absolute;
+    top:100%; left:0%;
+    height:3px;
+    width:50px;
+    background: #968783;
+}
+
 .Background {
     /* background:url(../images/bg.png) no-repeat; */
     height:500px;
@@ -2117,6 +2125,7 @@
     position:fixed;
     top:0; left:0; right:0; bottom:0;
     background:#222;
+    opacity:0.97;
     z-index: 99999999999;
 }
 .introBox > span { 
