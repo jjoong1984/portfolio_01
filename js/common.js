@@ -77,11 +77,16 @@
 
     $('.nav > .depth1 > li > a').on('click',function(){ 
         $(this).parent().addClass('on').siblings().removeClass('on')
-        var url = $(this).attr('href')
-        $('#jjContainer').remove
-        $('#jjContainer_Box').load(url)
-        return false
+        if ( $('html').hasClass('pc') ) {
+            var url = $(this).attr('href')
+             $('#jjContainer').remove
+             $('#jjContainer_Box').load(url)
+             return false
+        } else if ( $('html').hasClass('mobile') ) { 
+            return false
+        }
     })
+
     $('.nav .depth2 > li > a').on('click',function(){ 
         var url = $(this).attr('href')
         $('#jjContainer').remove

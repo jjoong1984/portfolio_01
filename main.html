@@ -367,13 +367,13 @@
 
     $(window).scroll(function(){ 
         var sct = $(this).scrollTop()
-        // var businessNear = $('.business').offset().top-$(this).height()/0.1
-        // if( sct >= businessNear ) { 
-        //     $('.business').addClass('on')
-        // } 
-        // else if (sct===0) { 
-        //     $('.business').removeClass('on')
-        // }
+        var businessNear = $('.business').offset().top-$(this).height()
+        if( sct >= businessNear ) { 
+            $('.business').addClass('on')
+        } 
+        else if (sct===0) { 
+            $('.business').removeClass('on')
+        }
 
         var serviceNear = $('.service').offset().top-$(this).height()/1.4
         if( sct >= serviceNear ) { 
