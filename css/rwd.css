@@ -159,6 +159,7 @@
 @media screen and ( max-width:767px ) { 
     #join_page,
     #login_page,
+    #siteMap_page,
     #section_page,
     #intro_page,
     #location_page,
@@ -169,6 +170,13 @@
     #notice_page
     { padding-top:129px ;}
 
+
+    /* #header .login a:last-child { 
+        display:none
+    }
+    #header .login a:nth-child(3):after { 
+        display:none
+    } */
 
     #header .h1Nav { 
         position:relative;
@@ -475,7 +483,26 @@
         margin:0px auto 10px ;
         display:block;
     }
-    
+
+    /* 사이트맵 페이지 */
+    .siteMap_depth1 span { 
+        display: inline-block;
+        font-size: 19px;
+        font-weight: bold;
+        color:#303030;
+        width:100%;
+    }
+    .siteMap_depth2 > li {
+        display: inline-block;
+        margin-top:13px;
+    }
+    .siteMap_box {
+        margin:60px auto;
+        padding:40px 40px;
+        width:100%;
+        border:0px solid #ddd; 
+        text-align: center;
+    }
 }
 
 @media screen and ( max-width:600px ) {
