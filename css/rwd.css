@@ -130,6 +130,33 @@
         height:450px;
      }
 
+     .intro > div { 
+        float: none;
+        width:100%;
+    }
+    .intro > div:nth-of-type(2) { 
+        margin-left: 0;
+        height: 400px;
+        overflow: hidden;
+    }
+    .intro > div:nth-of-type(2) img { 
+       width: 100%;
+       height: auto;
+    }
+
+    /* 비지니스 페이지 */
+    .businessInfo_content {
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    .text_Box h2 { 
+        color:#303030;
+        font-size:22px;
+        padding:0 16px;
+        border-left:4px solid #303030;
+        margin-bottom:24px;
+        position:relative;
+    }
 
 
 
@@ -181,6 +208,7 @@
     #header .h1Nav { 
         position:relative;
     }
+   
     #header .h1Nav h1 { 
         font-size:42px;
         font-family:'Raleway' 'verdana' 'sans-serif';
@@ -397,9 +425,6 @@
     }    
 
 
-
-
-    
     #footer {
         background: #625654;
         padding: 25px 0;
@@ -503,6 +528,147 @@
         border:0px solid #ddd; 
         text-align: center;
     }
+
+    /* 회사소개 */
+    .intro > div:nth-of-type(2) { 
+        margin-left: 0;
+        height: auto;
+        overflow: hidden;
+    }
+    .intro > div:nth-of-type(2) img { 
+       width: 100%;
+       height: auto;
+    }
+    .intro_team > div { 
+        float: left;
+        width:31.3%;
+        margin:0 1%;
+    }
+
+    .intro_team .picture img { 
+        width: 240px;
+        height:auto;
+    }
+
+    .location_box  .map > div { 
+        float: none;
+        width:100%;
+    }
+    .location_box  .map > div:nth-child(2) { 
+        margin-left:0%;
+        margin-top: 10px;
+    }
+    .location_box  .map > div iframe { 
+        width: 100%;
+        height: 400px;
+    }
+
+    /*비지니스 페이지*/
+    .businessInfo_content:nth-child(1) > div { 
+        float: none;
+        width: 100%;
+    }
+    .businessInfo_content:nth-child(2) > div { 
+        float: none;
+        width: 100%;
+    }
+    .businessInfo_content .right { 
+        margin-left: 0%;
+    }
+    .businessInfo_content .left { 
+        margin-right: 0%;
+    }
+
+    .our_services > div { 
+        float: none;
+        width:100%;
+    }
+    .our_services .txt { 
+        text-align:center;
+        height: auto;   
+        position:relative;
+    }
+    .our_services .txt > div { 
+        position: static;
+        top:0%;
+        transform:translateY(-0%);
+        margin-right:0px
+    }
+    .our_services .txt h3:after { 
+        content:'';
+        position:absolute;
+        bottom:0; right:50%;
+        width:60px;
+        height:3px;
+        background:#968783;
+        margin-right: -30px;
+    }
+    .our_services .txt p { 
+        font-size: 14px;
+        color:#505050;
+        width:60%;
+        margin-left:40%;
+        line-height:1.5;
+        letter-spacing:1px;
+        margin: 0 auto;
+    }
+    .our_services .img { 
+        right: 0;
+        background:url(../images/businessField_01.jpg) no-repeat;
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: right;
+        height:400px;
+        text-align: center;
+        position:relative;
+        margin:20px 0;
+    }
+    .mobileN > div { 
+        float: none;
+        width:100%;
+    }
+    .mobileN .txt { 
+        text-align:center;
+        height: auto;   
+        position:relative;
+    }
+    .mobileN .txt > div { 
+        position: static;
+        top:0%;
+        transform:translateY(-0%);
+        margin-left:0px
+    }
+    .mobileN .txt h3:after { 
+        content:'';
+        position:absolute;
+        bottom:0; left:50%;
+        width:60px;
+        height:3px;
+        background:#968783;
+        margin-left: -30px;
+
+    }
+    .mobileN .txt p { 
+        font-size: 14px;
+        color:#505050;
+        width:60%;
+        margin-left:0%;
+        line-height:1.5;
+        letter-spacing:1px;
+        margin: 0 auto;
+    }
+    .mobileN .img { 
+        right: 0;
+        background:url(../images/businessField_02.jpg) no-repeat;
+        background-attachment:fixed;
+        background-size: cover;
+        background-position: right;
+        height: 400px;
+        text-align: center;
+        position:relative;
+        margin-top:20px ;
+    }
+
 }
 
 @media screen and ( max-width:600px ) {
@@ -551,9 +717,45 @@
         top:-2px; left:-7px;
         display:none
     }
+    .location_box  .map > div iframe { 
+        width: 100%;
+        height: 300px;
+    }
+    .textBox > div { 
+        float: none;
+        width:100%;
+        margin: 0 0%;
+    }
+    .textBox h2 { 
+        color:#303030;
+        font-size:20px;
+        padding:0 16px;
+        border-left:4px solid #303030;
+        margin:20px 0;
+        position:relative;
+    }
+    .textBox h2:after { 
+        content:'';
+        width:40%;
+        height:1px;
+        position: absolute; 
+        top:50%;
+        z-index: 9999999;
+        background: #505050;;
+        margin-left:20px;   
+    }
 }
 
 @media screen and ( max-width:500px ) {
+    #header .topmenu .sns { 
+        font-size: 15px;
+        color: #505050;
+        position: absolute;
+        top:50%; right:0;
+        transform:translateY(-50%); 
+        display:none;
+    }
+    
     .slide .text { 
         text-align: center;
         position:absolute;
@@ -621,6 +823,12 @@
         width:200px;
         margin:0 auto;
         
+    }
+
+    .intro_team > div { 
+        float: left;
+        width:48%;
+        margin:0 1%;
     }
 
 }

@@ -1176,7 +1176,7 @@
 .intro_box h2 { 
     color: #303030;
     font-size:24px;
-    margin-bottom:40px;
+    margin-bottom:30px;
     padding-bottom:15px;
     position: relative;
 }
@@ -1275,7 +1275,7 @@
     font-size: 25px;   
 }
 .location_box { 
-    padding: 50px 0;
+    padding: 50px 10px;
     overflow: hidden;
 }
 .location_box  .map > div { 
@@ -1291,7 +1291,8 @@
 }
 .textBox > div { 
     float: left;
-    width:33.333%
+    width:31.3%;
+    margin: 0 1%;
 }
 .textBox h2 { 
     color:#303030;
@@ -1303,7 +1304,7 @@
 }
 .textBox h2:after { 
     content:'';
-    width:230px;
+    width:40%;
     height:1px;
     position: absolute; 
     top:50%;
@@ -1363,15 +1364,22 @@
     padding:50px 0;
     margin-bottom: 50px;
 }
-.businessInfo_content > div { 
+.businessInfo_content {
+    margin: 0 auto;
+}
+.businessInfo_content:nth-child(1) > div { 
+    float: right;
+    width: 49%;
+}
+.businessInfo_content:nth-child(2) > div { 
     float: left;
-    width: 48.5%;
+    width: 49%;
 }
 .businessInfo_content .right { 
-    margin-left: 35px;
+    margin-left: 2%;
 }
 .businessInfo_content .left { 
-    margin-right: 35px;
+    margin-right: 2%;
 }
 .text_Box h2 { 
     color:#303030;
@@ -1381,7 +1389,7 @@
     margin-bottom:24px;
     position:relative;
 }
-.text_Box h2:after { 
+/* .text_Box h2:after { 
     content:'';
     width:70px;
     height:1px;
@@ -1390,7 +1398,7 @@
     z-index: 9999999;
     background: #505050;;
     margin-left:20px;
-}
+} */
 .text_Box p { 
     color:#505050;
     font-size:14px;
@@ -1487,21 +1495,21 @@
     height: 800px;
     text-align: center;
     position:relative;
-
 }
-.our_services .img > div { 
+.businessField_box .img > div { 
     position:absolute;
     top:50%; left:50%;
-    transform:translate(-50%, -50%)
+    transform:translate(-50%, -50%);
+    width:100% ;
 }
-.our_services .img h3 { 
+.businessField_box .img h3 { 
     font-size: 25px;
     color:#fff;
     position:relative;  
     padding-bottom: 15px ;
  
 }
-.our_services .img h3:after {
+.businessField_box .img h3:after {
     content:''; 
     position:absolute;
     bottom:0; left:50%;
@@ -1512,16 +1520,14 @@
     color:#fff;
 }
 
-.our_services .img p { 
+.businessField_box .img p { 
     font-size: 14px;
     color:#fff;
-    width: 590px;
+    width: 72%;
     margin:0 auto;
     padding-top: 15px ;
 
 }
-
-
 
 .mobileN > div { 
     float: right;
@@ -1541,7 +1547,6 @@
 .mobileN .txt > div > div:nth-child(2) {
     margin-top: 60px;
     margin-bottom: 60px;
-
 }
 .mobileN .txt i { 
     font-size: 32px;
@@ -1579,37 +1584,6 @@
     height: 800px;
     text-align: center;
     position:relative;
-
-}
-.mobileN .img > div { 
-    position:absolute;
-    top:50%; left:50%;
-    transform:translate(-50%, -50%)
-}
-.mobileN .img h3 { 
-    font-size: 25px;
-    color:#fff;
-    position:relative;  
-    padding-bottom: 15px ;
- 
-}
-.mobileN .img h3:after {
-    content:''; 
-    position:absolute;
-    bottom:0; left:50%;
-    transform:translateX(-50%);
-    width: 100px;
-    height:2px;
-    background:#fff;
-    color:#fff;
-}
-
-.mobileN .img p { 
-    font-size: 14px;
-    color:#fff;
-    width: 540px;
-    margin:0 auto;
-    padding-top: 15px ;
 
 }
 
