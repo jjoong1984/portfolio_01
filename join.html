@@ -13,40 +13,40 @@
                     <form action="#" method="post" class="join_form" >
                         <fieldset>
                             <legend>로그인</legend>
-                            <div class="id_box">
+                            <div class="id_box joinBox">
                                 <input type="text" placeholder="">
                                 <span class="placeholder">아이디</span>  
                             </div>
                             <p>필수항목</p>
-                            <div class="pw_box mtop15">
+                            <div class="pw_box mtop15 joinBox">
                                 <input type="password" placeholder="">
                                 <span class="placeholder">비밀번호</span>   
                             </div>
                             <p>문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요</p>
-                            <div class="pwre_box mtop15">
+                            <div class="pwre_box mtop15 joinBox">
                                 <input type="password" placeholder="">
                                 <span class="placeholder">비밀번호확인</span>   
                             </div>
                             <p>문자, 숫자, 기호를 조합하여 8자 이상을 사용하세요</p>
-                            <div class="name_box mtop15">
+                            <div class="name_box mtop15 joinBox">
                                 <input type="text" placeholder="">
                                 <span class="placeholder">이름</span>   
                             </div>
                             <p>필수사항</p>
-                            <div class="phone_box mtop15">
+                            <div class="phone_box mtop15 joinBox">
                                 <input type="text" placeholder="">
                                 <span class="placeholder">연락처</span>   
                             </div>
                             <p>필수사항</p>
-                            <div class="gender_box mtop15">
-                                <select name="" id="">
+                            <div class="gender_box mtop15 joinBox">
+                                <select name="gender" id="gender">
                                     <option value="1"></option>
                                     <option value="2">남자</option>
                                     <option value="3">여자</option>
                                 </select>
                                 <span class="placeholder">성별</span>   
                             </div>
-                            <div class="email_box mtop29">
+                            <div class="email_box mtop29 joinBox">
                                 <div>
                                     <input type="text" placeholder="" class="email">
                                     <span class="placeholder">이메일</span>
@@ -72,3 +72,47 @@
     
     </section>
 </div>
+
+<script>
+
+    (function($){ 
+        $('.joinBox input').focus(function(){ 
+            $(this).parents('.joinBox').addClass('on')
+        }).blur(function(){ 
+            var elInput = $(this).val()
+            if ( elInput.length === 0) { 
+                $(this).parents('.joinBox').removeClass('on')
+            } else { 
+                $(this).parents('.joinBox').addClass('on')
+            }
+        })
+
+        $('#gender').on('focus', function(){ 
+           $(this).parent().addClass('on')   
+        }).blur(function(){ 
+            //select option의value값이 1이면
+            var selectVal = $(this).val()
+            if( selectVal==='1' ) {
+                $(this).parent().removeClass('on')
+            } else { 
+                $(this).parent().addClass('on')
+            }   
+        })
+
+
+
+        // $('#gender').blur(function(){ 
+        //     var selVal = $('#gender option:selected').val()
+        //     console.log(selVal)
+        //     if ( selVal === 1 ) { 
+        //         $(this).parents('.joinBox').removeClass('on')
+        //     } else { 
+        //         $(this).parents('.joinBox').addClass('on')
+        //     }
+        // })
+
+
+
+
+    })(jQuery)
+</script>
