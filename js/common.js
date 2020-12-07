@@ -1,7 +1,7 @@
 (function($){ 
 
     $(window).load(function(){ 
-        $('.introBox').delay(500).fadeOut(300)
+        $('.introBox').delay(1000).fadeOut(500)
     })
 
     var deviceSize = 767;
